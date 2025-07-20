@@ -1,0 +1,194 @@
+[
+    {
+      "id": 1,
+      "date": "2025-01-20",
+      "title": "Welcome to CME 295!",
+      "content": "Welcome to Transformers & Large Language Models course! Please check the syllabus and course schedule. First class begins on January 27th.",
+      "type": "important",
+      "pinned": true
+    },
+    {
+      "id": 2,
+      "date": "2025-01-22",
+      "title": "Assignment 1 Released",
+      "content": "Assignment 1 on 'Introduction to NLP and Attention Mechanisms' has been released. Due date: February 5th, 11:59 PM. Check Canvas for submission guidelines.",
+      "type": "important",
+      "pinned": true
+    },
+    {
+      "id": 3,
+      "date": "2025-01-25",
+      "title": "Course Registration Deadline Extended",
+      "content": "Registration deadline has been extended to January 30th due to high demand. Please complete your enrollment as soon as possible.",
+      "type": "info",
+      "pinned": false
+    },
+    {
+      "id": 4,
+      "date": "2025-01-28",
+      "title": "Lecture 1 Recording Available",
+      "content": "Recording for Lecture 1 (Introduction to NLP) is now available on Canvas. Slides and code examples have also been uploaded.",
+      "type": "info",
+      "pinned": false
+    },
+    {
+      "id": 5,
+      "date": "2025-02-01",
+      "title": "Office Hours Schedule Updated",
+      "content": "TA office hours have been updated. Check the course staff section for new timings. Additional office hours added before assignment deadlines.",
+      "type": "info",
+      "pinned": false
+    },
+    {
+      "id": 6,
+      "date": "2025-02-03",
+      "title": "Assignment 1 Submission Reminder",
+      "content": "Reminder: Assignment 1 is due on February 5th at 11:59 PM. Late submissions will incur penalty as per syllabus. Submit via Canvas.",
+      "type": "important",
+      "pinned": false
+    },
+    {
+      "id": 7,
+      "date": "2025-02-06",
+      "title": "Guest Lecture Announcement",
+      "content": "We will have a guest lecture by Dr. Sarah Chen from OpenAI on February 12th about 'Scaling Laws in Large Language Models'. Don't miss it!",
+      "type": "info",
+      "pinned": true
+    },
+    {
+      "id": 8,
+      "date": "2025-02-08",
+      "title": "Assignment 2 Released - BERT Implementation",
+      "content": "Assignment 2 on 'BERT Fine-tuning for Classification Tasks' is now available. Due date: February 22nd. This assignment requires GPU access - check compute resources guide.",
+      "type": "important",
+      "pinned": true
+    },
+    {
+      "id": 9,
+      "date": "2025-02-10",
+      "title": "Midterm Exam Date Announced",
+      "content": "Midterm examination scheduled for February 26th, 3:30 PM - 5:30 PM in the regular classroom. Covers lectures 1-8. Study guide will be released next week.",
+      "type": "important",
+      "pinned": true
+    },
+    {
+      "id": 10,
+      "date": "2025-02-12",
+      "title": "GPU Access for Assignments",
+      "content": "Google Colab Pro accounts are available for students who need additional GPU resources. Contact TAs with your student ID to get access credentials.",
+      "type": "info",
+      "pinned": false
+    },
+    {
+      "id": 11,
+      "date": "2025-02-15",
+      "title": "Class Cancelled - February 16th",
+      "content": "Class on February 16th is cancelled due to institute holiday. Next class will be on February 19th. Please review transformer architecture materials.",
+      "type": "important",
+      "pinned": false
+    },
+    {
+      "id": 12,
+      "date": "2025-02-18",
+      "title": "Midterm Study Guide Released",
+      "content": "Midterm exam study guide and practice questions are now available on Canvas. Review sessions scheduled for February 24th and 25th.",
+      "type": "info",
+      "pinned": false
+    },
+    {
+      "id": 13,
+      "date": "2025-02-20",
+      "title": "Assignment 2 Deadline Extension",
+      "content": "Due to technical issues with the server, Assignment 2 deadline has been extended to February 24th, 11:59 PM. No further extensions will be granted.",
+      "type": "important",
+      "pinned": true
+    },
+    {
+      "id": 14,
+      "date": "2025-02-25",
+      "title": "Final Project Guidelines Released",
+      "content": "Final project guidelines and topic suggestions are now available. Project proposal due March 8th. Teams of 2-3 students allowed.",
+      "type": "important",
+      "pinned": true
+    },
+    {
+      "id": 15,
+      "date": "2025-02-28",
+      "title": "Midterm Results Posted",
+      "content": "Midterm exam results have been posted on Canvas. Overall class average: 78%. Office hours available for grade discussions this week.",
+      "type": "info",
+      "pinned": false
+    },
+    {
+      "id": 16,
+      "date": "2025-03-02",
+      "title": "Assignment 3 Released - GPT Fine-tuning",
+      "content": "Assignment 3 on 'GPT Model Fine-tuning and Text Generation' is now available. Due date: March 15th. Includes both coding and theoretical components.",
+      "type": "important",
+      "pinned": true
+    },
+    {
+      "id": 17,
+      "date": "2025-03-05",
+      "title": "Research Paper Presentation Slots",
+      "content": "Sign-up sheet for research paper presentations (Week 9) is now open. Each student must present one recent paper on LLMs. First-come, first-serve basis.",
+      "type": "info",
+      "pinned": false
+    },
+    {
+      "id": 18,
+      "date": "2025-03-08",
+      "title": "Final Project Proposal Deadline Today",
+      "content": "Final project proposals are due today by 11:59 PM. Submit via Canvas with team details and project scope. Feedback will be provided by March 12th.",
+      "type": "important",
+      "pinned": true
+    },
+    {
+      "id": 19,
+      "date": "2025-03-12",
+      "title": "Industry Panel Discussion",
+      "content": "Special industry panel on 'LLMs in Production' scheduled for March 19th. Panelists from Google, Microsoft, and Anthropic will discuss real-world applications.",
+      "type": "info",
+      "pinned": true
+    },
+    {
+      "id": 20,
+      "date": "2025-03-15",
+      "title": "Assignment 3 Submission Reminder",
+      "content": "Assignment 3 due today at 11:59 PM. Make sure to include all required files and documentation. Check submission checklist on Canvas.",
+      "type": "important",
+      "pinned": false
+    },
+    {
+      "id": 21,
+      "date": "2025-03-18",
+      "title": "Final Project Progress Report Due",
+      "content": "Final project progress reports due March 22nd. Include current status, challenges faced, and timeline for completion. 2-page limit.",
+      "type": "info",
+      "pinned": false
+    },
+    {
+      "id": 22,
+      "date": "2025-03-25",
+      "title": "Final Presentation Schedule Released",
+      "content": "Final project presentation schedule for April 2nd and 4th has been posted. Each team gets 15 minutes (12 min presentation + 3 min Q&A).",
+      "type": "important",
+      "pinned": true
+    },
+    {
+      "id": 23,
+      "date": "2025-03-28",
+      "title": "Course Evaluation Survey",
+      "content": "Please fill out the course evaluation survey by April 1st. Your feedback is valuable for improving the course. Anonymous and confidential.",
+      "type": "info",
+      "pinned": false
+    },
+    {
+      "id": 24,
+      "date": "2025-04-01",
+      "title": "Final Project Submission Deadline",
+      "content": "Final projects due April 3rd, 11:59 PM. Submit code, report, and presentation slides. Late submissions will not be accepted without prior approval.",
+      "type": "important",
+      "pinned": true
+    }
+  ]

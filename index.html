@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI60213 - Foundation of Large Language Models</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<script>
+    async function loadAnnouncements() {
+        try {
+            const response = await fetch('data/announcements.json');
+            const announcements = await response.json();
+            
+            const container = document.getElementById('announcements-container');
+            const noAnnouncements = document.getElementById('no-announcements');
+            
+            if (announcements.length === 0) {
+                noAnnouncements.style.display = 'block';
+                return;
+            }
+            
+            // Sort by pinned first, then by date (newest first)
+            announcements.sort((a, b) => {
+                if (a.pinned && !b.pinned) return -1;
+                if (!a.pinned && b.pinned) return 1;
+                return new Date(b.date) - new Date(a.date);
+            });
+            
+            container.innerHTML = announcements.map(announcement => `
+                <div class="announcement-card ${announcement.type} ${announcement.pinned ? 'pinned' : ''}">
+                    <div class="announcement-header">
+                        <div class="announcement-date">${formatDate(announcement.date)}</div>
+                        ${announcement.pinned ? '<div class="pin-badge"><i class="fas fa-thumbtack"></i> Pinned</div>' : ''}
+                    </div>
+                    <h4 class="announcement-title">${announcement.title}</h4>
+                    <p class="announcement-content">${announcement.content}</p>
+                </div>
+            `).join('');
+            
+        } catch (error) {
+            console.error('Error loading announcements:', error);
+            document.getElementById('no-announcements').style.display = 'block';
+        }
+    }
+    
+    function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString('en-US', options);
+    }
+    
+    // Load announcements when page loads
+    document.addEventListener('DOMContentLoaded', loadAnnouncements);
+    </script>
+
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="university-logo">
+                        <img src="assets/images/logo/kgp.png" alt="IIT Kharagpur" class="logo-image">
+                    </div>
+                    <div class="course-code">AI60213</div>
+                </div>
+                <nav>
+                    <div class="nav-buttons">
+                        <a href="index.html" class="btn btn-nav">HOME</a>
+                        <a href="schedule.html" class="btn btn-nav">SCHEDULE</a>
+                        <a href="assignments.html" class="btn btn-nav">ASSIGNMENTS</a>
+                        <a href="resources.html" class="btn btn-nav">RESOURCES</a>
+                        <!-- <a href="#cheatsheet" class="btn btn-nav">CHEATSHEET</a>
+                        <a href="#faq" class="btn btn-nav">FAQ</a> -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="course-info">
+                    <h1>AI60213 - Foundation of Large Language Models</h1>
+                    <p class="course-description">
+                        Language being a complex and intricate system of human expression have put forward a
+                        significant challenge to AI for its understanding and generation. Language models are the
+                        foundation of language understanding and task of language modelling has been evolved from
+                        statistical to neural models. In recent times, pre-trained language models (PLMs), founded on the
+                        Transformer architecture and trained on exceedingly large amount of data, has shown success in
+                        solving majority of the NLP tasks. The performance in various tasks has been observed to
+                        improve with the scale of the models. Consequently, several Large Language Models (LLMs)
+                        have been developed that not only can solve specific tasks but also has been observed to exhibit
+                        emergent behaviour. The LLMs have been adopted in other data modalities like vision, speech or
+                        multi-modal. Very recently, LLMs are being used to develop autonomous agents that can solve
+                        complex tasks. This course aims at providing foundational knowledge on key technologies for
+                        developing, leveraging and augmenting LLMs.
+                    </p>
+                    <div class="action-buttons">
+                        <a href="https://erp.iitkgp.ac.in/ERPWebServices/curricula/CurriculaElectiveList.jsp?stuType=UG&splCode=ECA&semno=9&curr_type=NEW&sub_type=DEPTH%20ELECTIVE%20AI%20-%20%20I#:~:text=4-,AI60213,-FOUNDATION%20OF%20LARGE" class="btn btn-primary">Syllabus</a>
+                        <!-- <a href="#" class="btn btn-secondary">Cheatsheet</a> -->
+                        <a href="#" class="btn btn-tertiary">Moodle</a>
+                    </div>
+                </div>
+                <div class="instructors-section">
+                    <h2>Instructor</h2>
+                    <div class="instructors-grid">
+                        <div class="instructor-card">
+                            <div class="instructor-avatar">
+                                <img src="assets/images/instructor/Pkb2.jpg" alt="Afshine Amidi" class="instructor-image">
+                            </div>
+                            <div class="instructor-name">Plaban Kumar Bhowmick</div>
+                            <div class="instructor-title">plaban@ai.iitkgp.ac.in</div>
+                            <div class="instructor-contact">
+                                <a href="mailto:plaban@ai.iitkgp.ac.in" class="contact-link">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="https://plaban.github.io" class="contact-link" target="_blank">
+                                    <i class="fas fa-globe"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/plaban-kumar-bhowmick-a2807510/?originalSubdomain=in" class="contact-link" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <div class="instructor-card">
+                            <div class="instructor-avatar">SA</div>
+                            <div class="instructor-name">Shervine Amidi</div>
+                            <div class="instructor-title">Instructor</div>
+                        </div> -->
+                    </div>
+                    <div class="logistics-section">
+                        <h3>Logistics</h3>
+                        <div class="logistics-info">
+                            <div class="logistics-item">
+                                <i class="fas fa-clock" style="color: #3498db;"></i>
+                                <span><strong>Time:</strong> Monday 11:0AM - 11:55AM, Tuesday 8:00AM - 9:55AM</span>
+                            </div>
+                            <div class="logistics-item">
+                                <i class="fas fa-map-marker-alt" style="color: #e74c3c;"></i>
+                                <span><strong>Location:</strong> NR-213, Nalanda Classroom Complex</span>
+                            </div>
+                            <div class="logistics-item">
+                                <i class="fas fa-award" style="color: #087530;"></i>
+                                <span><strong>Credits:</strong> 3-0-0 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Staff Section -->
+    <section class="staff-section">
+        <div class="container">
+            <div class="staff-content">
+                <div>
+                    <h2>Course Teaching Assistents</h2>
+                    <div class="staff-grid">
+                        <div class="staff-card">
+                            <div class="staff-avatar">
+                                <img src="assets/images/ta/Animesh.jpg" alt="Afshine Amidi" class="staff-image">
+                            </div>
+                            <div class="staff-name">Animesh</div>
+                            <div class="staff-title">Teaching Assistant</div>
+                            <div class="staff-contact">
+                                <a href="mailto:ta1@stanford.edu" class="contact-link">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="https://ta1.github.io" class="contact-link" target="_blank">
+                                    <i class="fas fa-globe"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/ta1" class="contact-link" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                            <div class="office-hours">
+                                <div class="office-hours-label">Office Hours:</div>
+                                <div class="office-hours-time">Mondays 2-4 PM</div>
+                                <div class="office-hours-time">Wednesdays 10-12 PM</div>
+                            </div>
+                        </div>
+                        <div class="staff-card">
+                            <div class="staff-avatar">
+                                <img src="assets/images/ta/rekha_regar.jpeg" alt="Afshine Amidi" class="staff-image">
+                            </div>
+                            <div class="staff-name">Rekha Regar</div>
+                            <div class="staff-title">Teaching Assistant</div>
+                            <div class="staff-contact">
+                                <a href="mailto:ta1@stanford.edu" class="contact-link">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="https://ta1.github.io" class="contact-link" target="_blank">
+                                    <i class="fas fa-globe"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/ta1" class="contact-link" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                            <div class="office-hours">
+                                <div class="office-hours-label">Office Hours:</div>
+                                <div class="office-hours-time">Mondays 2-4 PM</div>
+                                <div class="office-hours-time">Wednesdays 10-12 PM</div>
+                            </div>
+                        </div>
+                        <div class="staff-card">
+                            <div class="staff-avatar">
+                                <img src="assets/images/ta/trishits.png" alt="Afshine Amidi" class="staff-image">
+                            </div>
+                            <div class="staff-name">Trishita Mukharjee</div>
+                            <div class="staff-title">Teaching Assistant</div>
+                            <div class="staff-contact">
+                                <a href="mailto:ta1@stanford.edu" class="contact-link">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="https://ta1.github.io" class="contact-link" target="_blank">
+                                    <i class="fas fa-globe"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/ta1" class="contact-link" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                            <div class="office-hours">
+                                <div class="office-hours-label">Office Hours:</div>
+                                <div class="office-hours-time">Mondays 2-4 PM</div>
+                                <div class="office-hours-time">Wednesdays 10-12 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <h3>Sections</h3>
+                    <ul class="sidebar-menu">
+                        <li><a href="#announcements">Announcements</a></li>
+                        <li><a href="#generalinfo">General information</a></li>
+                        <li><a href="#objective">Course Objective</a></li>
+                        <li><a href="#grading">Grading Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Information Section -->
+    <!-- Course Objective Section -->
+    <section class="info-section" id="objective">
+        <div class="container">
+            <h2>Course Objective</h2>
+            <div class="info-content">
+                <p>Upon completion of the course the students will be able to</p>
+                <ul class="objective-list">
+                    <li>choose, integrate and identify strategies for building LLMs</li>
+                    <li>identify strategies and techniques for scaling up LLM development</li>
+                    <li>use and compare prompt engineering techniques to solve complex tasks like reasoning.</li>
+                    <li>evaluate the LLMs with setting up benchmarks</li>
+                    <li>identify potential threats posed by LLMs and apply mitigation techniques like Retrieval Augmented Generation.</li>
+                    <li>implement techniques to align LLM training with human goals and behaviors.</li>
+                    <li>implement autonomous agents (agentic AI) that use LLMs to solve complex tasks.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Requisite Section -->
+    <section class="info-section">
+        <div class="container">
+            <h2>Pre-Requisite</h2>
+            <div class="info-content">
+                <ul class="prerequisite-list">
+                    <li>Machine Learning and Deep Learning</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grading Policy Section -->
+    <section class="info-section" id="grading">
+        <div class="container">
+            <h2>Grading Policy</h2>
+            <div class="grading-content">
+                <p class="grading-intro">The final grade will be calculated based on the following components:</p>
+                
+                <div class="grading-breakdown">
+                    <div class="grade-item">
+                        <div class="grade-component">
+                            <div class="grade-icon assignments">
+                                <i class="fas fa-file-code"></i>
+                            </div>
+                            <div class="grade-details">
+                                <h4>Assignments</h4>
+                                <p>Programming assignments and problem sets</p>
+                            </div>
+                        </div>
+                        <div class="grade-percentage">30%</div>
+                    </div>
+
+                    <div class="grade-item">
+                        <div class="grade-component">
+                            <div class="grade-icon project">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="grade-details">
+                                <h4>Final Project</h4>
+                                <p>Research project with implementation and presentation</p>
+                            </div>
+                        </div>
+                        <div class="grade-percentage">25%</div>
+                    </div>
+
+                    <div class="grade-item">
+                        <div class="grade-component">
+                            <div class="grade-icon vlog">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="grade-details">
+                                <h4>Vlog</h4>
+                                <p>Video presentations and technical demonstrations</p>
+                            </div>
+                        </div>
+                        <div class="grade-percentage">15%</div>
+                    </div>
+
+                    <div class="grade-item">
+                        <div class="grade-component">
+                            <div class="grade-icon midterm">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <div class="grade-details">
+                                <h4>Mid-semester Exam</h4>
+                                <p>Comprehensive examination covering first half</p>
+                            </div>
+                        </div>
+                        <div class="grade-percentage">15%</div>
+                    </div>
+
+                    <div class="grade-item">
+                        <div class="grade-component">
+                            <div class="grade-icon final">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="grade-details">
+                                <h4>End-semester Exam</h4>
+                                <p>Final comprehensive examination</p>
+                            </div>
+                        </div>
+                        <div class="grade-percentage">15%</div>
+                    </div>
+                </div>
+
+                <div class="grading-notes">
+                    <h4>Additional Notes:</h4>
+                    <ul class="grading-notes-list">
+                        <li>Late submission policy: 10% deduction per day for assignments</li>
+                        <li>Final project includes code, report, and presentation components</li>
+                        <li>Attendance and class participation may contribute bonus points</li>
+                    </ul>
+                </div>
+
+                <!-- <div class="grading-scale">
+                    <h4>Grading Scale:</h4>
+                    <div class="scale-grid">
+                        <div class="scale-item">
+                            <span class="grade">A</span>
+                            <span class="range">90-100%</span>
+                        </div>
+                        <div class="scale-item">
+                            <span class="grade">B</span>
+                            <span class="range">80-89%</span>
+                        </div>
+                        <div class="scale-item">
+                            <span class="grade">C</span>
+                            <span class="range">70-79%</span>
+                        </div>
+                        <div class="scale-item">
+                            <span class="grade">D</span>
+                            <span class="range">60-69%</span>
+                        </div>
+                        <div class="scale-item">
+                            <span class="grade">F</span>
+                            <span class="range">Below 60%</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- General Information Section -->
+    <section class="info-section" id="generalinfo">
+        <div class="container">
+            <h2>General Information</h2>
+            <div class="info-content">
+                <p class="note-text">
+                    <strong>NOTE:</strong> We believe that ethics and social implications of LLMs are extremely important topics to 
+                    discuss. As these topics are covered in the 'AI and Ethics' (CS60016) offered in the Dept. of 
+                    CSE, this course does not include those.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Announcements Section -->
+    <section class="info-section" id="announcements">
+        <div class="container">
+            <h2>Announcements</h2>
+            <div id="announcements-container" class="announcements-content">
+                <!-- Announcements will be loaded here -->
+            </div>
+            <div class="no-announcements" id="no-announcements" style="display: none;">
+                <p>No announcements at this time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AI60213</h3>
+                    <p>Foundation of Large Language Models</p>
+                    <p>Department of Artificial Intelligence, IIT Kharagpur</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="assignments.html">Assignments</a></li>
+                        <!-- <li><a href="#syllabus">Syllabus</a></li>
+                        <li><a href="#canvas">Canvas</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>plaban@ai.iitkgp.ac.in</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Takshashila Building First Floor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 DoAI, IIT Kharagpur. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#accessibility">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

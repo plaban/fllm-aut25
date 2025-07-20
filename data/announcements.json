@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "date": "2025-07-20",
+      "title": "Course Registration Closed",
+      "content": "Registration for AI60213 is are closed.",
+      "type": "important",
+      "pinned": true
+    },
+    {
+      "id": 2,
+      "date": "2025-07-20",
+      "title": "Webpage Live",
+      "content": "Webpage for the course AI60213 is live now.",
+      "type": "info",
+      "pinned": false
+    }
+]

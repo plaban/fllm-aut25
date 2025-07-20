@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI60213 - Foundation of Large Language Models</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="university-logo">
+                        <img src="assets/images/logo/kgp.png" alt="IIT Kharagpur" class="logo-image">
+                    </div>
+                    <div class="course-code">AI60213</div>
+                </div>
+                <nav>
+                    <div class="nav-buttons">
+                        <a href="index.html" class="btn btn-nav">HOME</a>
+                        <a href="schedule.html" class="btn btn-nav">SCHEDULE</a>
+                        <a href="assignments.html" class="btn btn-nav">ASSIGNMENTS</a>
+                        <a href="resources.html" class="btn btn-nav">RESOURCES</a>
+                        <!-- <a href="#syllabus" class="btn btn-nav">SYLLABUS</a>
+                        <a href="#cheatsheet" class="btn btn-nav">CHEATSHEET</a>
+                        <a href="#faq" class="btn btn-nav">FAQ</a> -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Assignments & Projects</h1>
+            <p class="page-subtitle">Assignments, vlogs, and final project details</p>
+        </div>
+    </section>
+
+    <!-- Quick Navigation -->
+    <section class="quick-nav-section">
+        <div class="container">
+            <div class="quick-nav">
+                <a href="#assignments" class="quick-nav-item">
+                    <i class="fas fa-code"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="#vlog" class="quick-nav-item">
+                    <i class="fas fa-video"></i>
+                    <span>Video Log</span>
+                </a>
+                <a href="#project" class="quick-nav-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Final Project</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assignments Section -->
+    <section class="assignments-section" id="assignments">
+        <div class="container">
+            <h2>Assignments</h2>
+            <p class="section-description">
+                Complete the assignments covering key concepts in transformers and large language models.
+                Each assignment builds upon previous knowledge and includes both theoretical and practical components.
+            </p>
+            
+            <div class="assignments-grid">
+                <!-- Assignment 1 -->
+                <div class="assignment-card upcoming">
+                    <div class="assignment-header">
+                        <div class="assignment-number">01</div>
+                        <div class="assignment-status upcoming">Upcoming</div>     
+                        <!-- <div class="assignment-status released">Upcoming</div> -->
+                    </div>
+                    <div class="assignment-content">
+                        <h3>Introduction to NLP & Attention</h3>
+                        <div class="assignment-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Released: Jan 22, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Due: Feb 5, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>Weight: 10%</span>
+                            </div>
+                        </div>
+                        <p class="assignment-description">
+                            Implement basic attention mechanisms and compare RNN vs Transformer performance on sequence tasks.
+                            Includes theoretical questions on attention computation.
+                        </p>
+                        <div class="assignment-topics">
+                            <span class="topic-tag">Attention Mechanism</span>
+                            <span class="topic-tag">RNN vs Transformer</span>
+                            <span class="topic-tag">PyTorch</span>
+                        </div>
+
+                        <div class="assignment-actions">
+                            <button class="btn btn-disabled" disabled>
+                                <i class="fas fa-lock"></i>
+                                Coming Soon
+                            </button>
+                        </div>
+                        <!-- <div class="assignment-actions">
+                            <a href="assignments/assignment1.pdf" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-download"></i>
+                                Download PDF
+                            </a>
+                            <a href="https://forms.gle/assignment1" class="btn btn-secondary" target="_blank">
+                                <i class="fas fa-upload"></i>
+                                Submit Assignment
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Assignment 2 -->
+                <div class="assignment-card upcoming">
+                    
+                    <div class="assignment-header">
+                        <div class="assignment-number">02</div>
+                        <div class="assignment-status upcoming">Upcoming</div>
+                        <!-- <div class="assignment-status released">Upcoming</div> -->
+                    </div>
+                    <div class="assignment-content">
+                        <h3>BERT Fine-tuning & Classification</h3>
+                        <div class="assignment-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Released: Feb 8, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Due: Feb 22, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>Weight: 10%</span>
+                            </div>
+                        </div>
+                        <p class="assignment-description">
+                            Fine-tune BERT for sentiment analysis and text classification tasks. Compare different pre-trained models 
+                            and analyze the impact of different fine-tuning strategies.
+                        </p>
+                        <div class="assignment-topics">
+                            <span class="topic-tag">BERT</span>
+                            <span class="topic-tag">Fine-tuning</span>
+                            <span class="topic-tag">Classification</span>
+                            <span class="topic-tag">Hugging Face</span>
+                        </div>
+
+                        <div class="assignment-actions">
+                            <button class="btn btn-disabled" disabled>
+                                <i class="fas fa-lock"></i>
+                                Coming Soon
+                            </button>
+                        </div>
+                        <!-- <div class="assignment-actions">
+                            <a href="assignments/assignment2.pdf" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-download"></i>
+                                Download PDF
+                            </a>
+                            <a href="https://forms.gle/assignment2" class="btn btn-secondary" target="_blank">
+                                <i class="fas fa-upload"></i>
+                                Submit Assignment
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Assignment 3 -->
+                <div class="assignment-card upcoming">
+                    <div class="assignment-header">
+                        <div class="assignment-number">03</div>
+                        <div class="assignment-status upcoming">Upcoming</div>
+                    </div>
+                    <div class="assignment-content">
+                        <h3>GPT Implementation & Text Generation</h3>
+                        <div class="assignment-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Release: Mar 2, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Due: Mar 15, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>Weight: 10%</span>
+                            </div>
+                        </div>
+                        <p class="assignment-description">
+                            Build a GPT-style model from scratch and implement various text generation strategies. 
+                            Experiment with prompt engineering and evaluate generation quality.
+                        </p>
+                        <div class="assignment-topics">
+                            <span class="topic-tag">GPT Architecture</span>
+                            <span class="topic-tag">Text Generation</span>
+                            <span class="topic-tag">Prompt Engineering</span>
+                        </div>
+                        <div class="assignment-actions">
+                            <button class="btn btn-disabled" disabled>
+                                <i class="fas fa-lock"></i>
+                                Coming Soon
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Log Section -->
+    <section class="vlog-section" id="vlog">
+        <div class="container">
+            <h2>Video Log (Vlog)</h2>
+            <p class="section-description">
+                Create a technical video presentation explaining a recent research paper or demonstrating 
+                a practical application of large language models.
+            </p>
+            
+            <div class="vlog-content">
+                <div class="vlog-card">
+                    <div class="vlog-header">
+                        <div class="vlog-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="vlog-title">
+                            <h3>Technical Video Presentation</h3>
+                            <div class="vlog-meta">
+                                <span class="vlog-weight">Weight: 15%</span>
+                                <span class="vlog-duration">Duration: 8-10 minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vlog-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="requirements-list">
+                            <li>Choose a recent research paper (2023-2024) related to LLMs</li>
+                            <li>Create an 8-10 minute video explaining the paper's key contributions</li>
+                            <li>Include practical demonstration or code walkthrough</li>
+                            <li>Upload to YouTube/Drive and submit the link</li>
+                            <li>Provide a written summary (500 words)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vlog-timeline">
+                        <h4>Timeline:</h4>
+                        <div class="timeline-items">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Feb 15</div>
+                                <div class="timeline-desc">Paper selection deadline</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Mar 10</div>
+                                <div class="timeline-desc">Vlog submission deadline</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Mar 12-15</div>
+                                <div class="timeline-desc">Peer review period</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vlog-actions">
+                        <a href="assignments/vlog-guidelines.pdf" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-download"></i>
+                            Download Guidelines
+                        </a>
+                        <a href="https://forms.gle/vlog-submission" class="btn btn-secondary" target="_blank">
+                            <i class="fas fa-upload"></i>
+                            Submit Vlog
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Project Section -->
+    <section class="project-section" id="project">
+        <div class="container">
+            <h2>Final Project</h2>
+            <p class="section-description">
+                Work in teams of 2-3 to develop an innovative application or research project involving 
+                large language models. Demonstrate creativity, technical depth, and practical impact.
+            </p>
+            
+            <div class="project-content">
+                <div class="project-overview">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="project-title">
+                                <h3>Research or Application Project</h3>
+                                <div class="project-meta">
+                                    <span class="project-weight">Weight: 25%</span>
+                                    <span class="project-team">Team Size: 2-3 students</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-options">
+                            <h4>Project Categories:</h4>
+                            <div class="options-grid">
+                                <div class="option-card">
+                                    <h5>Research Project</h5>
+                                    <p>Novel research on LLM architectures, training methods, or applications</p>
+                                </div>
+                                <div class="option-card">
+                                    <h5>Application Development</h5>
+                                    <p>Build a practical application using LLMs with clear user value</p>
+                                </div>
+                                <div class="option-card">
+                                    <h5>Comparative Study</h5>
+                                    <p>In-depth analysis comparing different models or techniques</p>
+                                </div>
+                                <div class="option-card">
+                                    <h5>Tool Development</h5>
+                                    <p>Create tools to help researchers or developers work with LLMs</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-deliverables">
+                            <h4>Deliverables:</h4>
+                            <div class="deliverables-list">
+                                <div class="deliverable-item">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Project Proposal (2 pages)</span>
+                                </div>
+                                <div class="deliverable-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>Source Code & Documentation</span>
+                                </div>
+                                <div class="deliverable-item">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Final Report (8-10 pages)</span>
+                                </div>
+                                <div class="deliverable-item">
+                                    <i class="fas fa-presentation"></i>
+                                    <span>Final Presentation (15 minutes)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-timeline">
+                            <h4>Project Timeline:</h4>
+                            <div class="timeline-items">
+                                <div class="timeline-item completed">
+                                    <div class="timeline-date">Mar 8</div>
+                                    <div class="timeline-desc">Project proposal due</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">Mar 22</div>
+                                    <div class="timeline-desc">Progress report due</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">Apr 3</div>
+                                    <div class="timeline-desc">Final submission due</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">Apr 2-4</div>
+                                    <div class="timeline-desc">Final presentations</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="assignments/project-guidelines.pdf" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-download"></i>
+                                Download Guidelines
+                            </a>
+                            <a href="https://forms.gle/project-proposal" class="btn btn-secondary" target="_blank">
+                                <i class="fas fa-upload"></i>
+                                Submit Proposal
+                            </a>
+                            <a href="assignments/project-ideas.pdf" class="btn btn-tertiary" target="_blank">
+                                <i class="fas fa-lightbulb"></i>
+                                Project Ideas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AI60213</h3>
+                    <p>Foundation of Large Language Models</p>
+                    <p>Department of Artificial Intelligence, IIT Kharagpur</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="assignments.html">Assignments</a></li>
+                        <!-- <li><a href="#syllabus">Syllabus</a></li>
+                        <li><a href="#canvas">Canvas</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>plaban@ai.iitkgp.ac.in</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Takshashila Building First Floor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 DoAI, IIT Kharagpur. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#accessibility">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI60213 - Foundation of Large Language Models</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="university-logo">
+                        <img src="assets/images/logo/kgp.png" alt="IIT Kharagpur" class="logo-image">
+                    </div>
+                    <div class="course-code">AI60213</div>
+                </div>
+                <nav>
+                    <div class="nav-buttons">
+                        <a href="index.html" class="btn btn-nav">HOME</a>
+                        <a href="schedule.html" class="btn btn-nav">SCHEDULE</a>
+                        <a href="assignments.html" class="btn btn-nav">ASSIGNMENTS</a>
+                        <a href="resources.html" class="btn btn-nav">RESOURCES</a>
+                        <!-- <a href="#syllabus" class="btn btn-nav">SYLLABUS</a>
+                        <a href="#cheatsheet" class="btn btn-nav">CHEATSHEET</a>
+                        <a href="#faq" class="btn btn-nav">FAQ</a> -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Course Schedule</h1>
+            <p class="page-subtitle">Weekly topics, assignments, and important dates</p>
+        </div>
+    </section>
+
+    <!-- Schedule Content -->
+    <section class="schedule-section">
+        <div class="container">
+            <div class="schedule-table-container">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Topic</th>
+                            <th>Resources</th>
+                            <th>Extra Reading</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Week 1 -->
+                        <tr class="week-header-row">
+                            <td colspan="4" class="week-header-cell">
+                                <h3>Week 1</h3>
+                            </td>
+                        </tr>
+                        <tr class="class-row">
+                            <td class="date-cell">
+                                <div class="date-info">
+                                    <span class="date">July 21</span>
+                                    <span class="day">Monday</span>
+                                </div>
+                            </td>
+                            <td class="topic-cell">
+                                <h4>Introduction to LLMs</h4>
+                                <p>Historical developement and Impact</p>
+                                <div class="topic-tags">
+                                    <span class="tag">Fundamentals</span>
+                                    <span class="tag">History</span>
+                                </div>
+                            </td>
+                            <td class="resources-cell">
+                                <div class="resource-links">
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Lecture 1 PDF
+                                    </a>
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-powerpoint"></i>
+                                        Lecture 1 Slides
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="reading-cell">
+                                <div class="reading-links">
+                                    <!-- <a href="#" class="reading-link">Jurafsky & Martin Ch. 1</a>
+                                    <a href="#" class="reading-link">Manning & Schütze Ch. 1</a> -->
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="class-row">
+                            <td class="date-cell">
+                                <div class="date-info">
+                                    <span class="date">July 22</span>
+                                    <span class="day">Tuesday</span>
+                                </div>
+                            </td>
+                            <td class="topic-cell">
+                                <h4>Introduction to LLMs </h4>
+                                <p>Understanding the evaluation of Langugae Models</p>
+                                <div class="topic-tags">
+                                    <span class="tag">pLM</span>
+                                    <span class="tag">Language Model</span>
+                                </div>
+                            </td>
+                            <td class="resources-cell">
+                                <div class="resource-links">
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Lecture 2 PDF
+                                    </a>
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-powerpoint"></i>
+                                        Lecture 2 Slides
+                                    </a>
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-code"></i>
+                                        Code Examples
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="reading-cell">
+                                <div class="reading-links">
+                                    <!-- <a href="#" class="reading-link">Bahdanau et al. 2014</a>
+                                    <a href="#" class="reading-link">Luong et al. 2015</a> -->
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Week 2 -->
+                        <tr class="week-header-row">
+                            <td colspan="4" class="week-header-cell">
+                                <h3>Week 2</h3>
+                            </td>
+                        </tr>
+                        <tr class="class-row">
+                            <td class="date-cell">
+                                <div class="date-info">
+                                    <span class="date">July 28</span>
+                                    <span class="day">Monday</span>
+                                </div>
+                            </td>
+                            <td class="topic-cell">
+                                <h4>Transformer Architecture: Self-Attention</h4>
+                                <p>Deep dive into self-attention mechanism and multi-head attention</p>
+                                <div class="topic-tags">
+                                    <span class="tag">Self-Attention</span>
+                                    <span class="tag">Multi-Head</span>
+                                </div>
+                                <div class="assignment-badge">
+                                    <i class="fas fa-tasks"></i>
+                                    Assignment 1 Released
+                                </div>
+                            </td>
+                            <td class="resources-cell">
+                                <div class="resource-links">
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Lecture 3 Slides
+                                    </a>
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-laptop-code"></i>
+                                        Interactive Demo
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="reading-cell">
+                                <div class="reading-links">
+                                    <a href="#" class="reading-link">Attention Is All You Need</a>
+                                    <a href="#" class="reading-link">The Illustrated Transformer</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="class-row">
+                            <td class="date-cell">
+                                <div class="date-info">
+                                    <span class="date">July 29</span>
+                                    <span class="day">Tuesday</span>
+                                </div>
+                            </td>
+                            <td class="topic-cell">
+                                <h4>Transformer Architecture: Advance Techniques</h4>
+                                <p>Understanding positional encoding and normalization techniques in transformers</p>
+                                <div class="topic-tags">
+                                    <span class="tag">Positional Encoding</span>
+                                    <span class="tag">LayerNorm</span>
+                                </div>
+                            </td>
+                            <td class="resources-cell">
+                                <div class="resource-links">
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Lecture 4 Slides
+                                    </a>
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-chart-line"></i>
+                                        Visualization Tool
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="reading-cell">
+                                <div class="reading-links">
+                                    <a href="#" class="reading-link">Lei Ba et al. 2016</a>
+                                    <a href="#" class="reading-link">Transformer Math Notes</a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Week 3 -->
+                        <!-- <tr class="week-header-row">
+                            <td colspan="4" class="week-header-cell">
+                                <h3>Week 3</h3>
+                            </td>
+                        </tr>
+                        <tr class="class-row">
+                            <td class="date-cell">
+                                <div class="date-info">
+                                    <span class="date">August 4</span>
+                                    <span class="day">Monday</span>
+                                </div>
+                            </td>
+                            <td class="topic-cell">
+                                <h4>BERT: Bidirectional Encoder Representations</h4>
+                                <p>Understanding BERT architecture and bidirectional training approach</p>
+                                <div class="topic-tags">
+                                    <span class="tag">BERT</span>
+                                    <span class="tag">Bidirectional</span>
+                                </div>
+                                <div class="assignment-badge due">
+                                    <i class="fas fa-clock"></i>
+                                    Assignment 1 Due
+                                </div>
+                            </td>
+                            <td class="resources-cell">
+                                <div class="resource-links">
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Lecture 5 Slides
+                                    </a>
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-code"></i>
+                                        BERT Tutorial
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="reading-cell">
+                                <div class="reading-links">
+                                    <a href="#" class="reading-link">Devlin et al. 2018</a>
+                                    <a href="#" class="reading-link">BERT Paper Analysis</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="class-row">
+                            <td class="date-cell">
+                                <div class="date-info">
+                                    <span class="date">August 5</span>
+                                    <span class="day">Tuesday</span>
+                                </div>
+                            </td>
+                            <td class="topic-cell">
+                                <h4>Masked Language Modeling & Fine-tuning</h4>
+                                <p>MLM training objective and downstream task fine-tuning strategies</p>
+                                <div class="topic-tags">
+                                    <span class="tag">MLM</span>
+                                    <span class="tag">Fine-tuning</span>
+                                </div>
+                            </td>
+                            <td class="resources-cell">
+                                <div class="resource-links">
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Lecture 6 Slides
+                                    </a>
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-tools"></i>
+                                        Fine-tuning Lab
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="reading-cell">
+                                <div class="reading-links">
+                                    <a href="#" class="reading-link">Rogers et al. 2020</a>
+                                    <a href="#" class="reading-link">Kenton & Toutanova 2019</a>
+                                </div>
+                            </td>
+                        </tr> -->
+
+                        <!-- Week 4 -->
+                        <!-- <tr class="week-header-row">
+                            <td colspan="4" class="week-header-cell">
+                                <h3>Week 4</h3>
+                            </td>
+                        </tr>
+                        <tr class="class-row">
+                            <td class="date-cell">
+                                <div class="date-info">
+                                    <span class="date">Oct 18</span>
+                                    <span class="day">Friday</span>
+                                </div>
+                            </td>
+                            <td class="topic-cell">
+                                <h4>GPT: Generative Pre-trained Transformer</h4>
+                                <p>Understanding autoregressive language modeling and GPT architecture</p>
+                                <div class="topic-tags">
+                                    <span class="tag">GPT</span>
+                                    <span class="tag">Autoregressive</span>
+                                </div>
+                                <div class="assignment-badge">
+                                    <i class="fas fa-tasks"></i>
+                                    Assignment 2 Released
+                                </div>
+                            </td>
+                            <td class="resources-cell">
+                                <div class="resource-links">
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Lecture 7 Slides
+                                    </a>
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-play"></i>
+                                        GPT Demo
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="reading-cell">
+                                <div class="reading-links">
+                                    <a href="#" class="reading-link">Radford et al. 2018</a>
+                                    <a href="#" class="reading-link">GPT vs BERT Comparison</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="class-row">
+                            <td class="date-cell">
+                                <div class="date-info">
+                                    <span class="date">Oct 20</span>
+                                    <span class="day">Sunday</span>
+                                </div>
+                            </td>
+                            <td class="topic-cell">
+                                <h4>Text Generation Techniques</h4>
+                                <p>Beam search, nucleus sampling, and other decoding strategies</p>
+                                <div class="topic-tags">
+                                    <span class="tag">Generation</span>
+                                    <span class="tag">Sampling</span>
+                                </div>
+                            </td>
+                            <td class="resources-cell">
+                                <div class="resource-links">
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Lecture 8 Slides
+                                    </a>
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-keyboard"></i>
+                                        Generation Playground
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="reading-cell">
+                                <div class="reading-links">
+                                    <a href="#" class="reading-link">Holtzman et al. 2019</a>
+                                    <a href="#" class="reading-link">Fan et al. 2018</a>
+                                </div>
+                            </td>
+                        </tr> -->
+
+                        <!-- Week 5 -->
+                        <!-- <tr class="week-header-row">
+                            <td colspan="4" class="week-header-cell">
+                                <h3>Week 5</h3>
+                            </td>
+                        </tr>
+                        <tr class="class-row">
+                            <td class="date-cell">
+                                <div class="date-info">
+                                    <span class="date">Oct 25</span>
+                                    <span class="day">Friday</span>
+                                </div>
+                            </td>
+                            <td class="topic-cell">
+                                <h4>Large Language Models: Scaling Laws</h4>
+                                <p>Understanding how model performance scales with size, data, and compute</p>
+                                <div class="topic-tags">
+                                    <span class="tag">Scaling</span>
+                                    <span class="tag">LLMs</span>
+                                </div>
+                                <div class="midterm-badge">
+                                    <i class="fas fa-clipboard-check"></i>
+                                    Midterm Week
+                                </div>
+                            </td>
+                            <td class="resources-cell">
+                                <div class="resource-links">
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Lecture 9 Slides
+                                    </a>
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-chart-bar"></i>
+                                        Scaling Calculator
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="reading-cell">
+                                <div class="reading-links">
+                                    <a href="#" class="reading-link">Kaplan et al. 2020</a>
+                                    <a href="#" class="reading-link">Hoffmann et al. 2022</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="class-row midterm-row">
+                            <td class="date-cell">
+                                <div class="date-info">
+                                    <span class="date">Oct 27</span>
+                                    <span class="day">Sunday</span>
+                                </div>
+                            </td>
+                            <td class="topic-cell">
+                                <h4>Midterm Examination</h4>
+                                <p>Comprehensive exam covering weeks 1-4 material</p>
+                                <div class="midterm-badge large">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    MIDTERM EXAM
+                                </div>
+                            </td>
+                            <td class="resources-cell">
+                                <div class="resource-links">
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Study Guide
+                                    </a>
+                                    <a href="#" class="resource-link">
+                                        <i class="fas fa-question-circle"></i>
+                                        Practice Questions
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="reading-cell">
+                                <div class="reading-links">
+                                    <a href="#" class="reading-link">All Previous Readings</a>
+                                    <a href="#" class="reading-link">Review Notes</a>
+                                </div>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AI60213</h3>
+                    <p>Foundation of Large Language Models</p>
+                    <p>Department of Artificial Intelligence, IIT Kharagpur</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="assignments.html">Assignments</a></li>
+                        <!-- <li><a href="#syllabus">Syllabus</a></li>
+                        <li><a href="#canvas">Canvas</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>plaban@ai.iitkgp.ac.in</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Takshashila Building First Floor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 DoAI, IIT Kharagpur. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#accessibility">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
