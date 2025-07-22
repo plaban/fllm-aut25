@@ -71,6 +71,7 @@ body {
     color: #2c3e50;
     letter-spacing: -0.5px;
     line-height: 1;
+    transition: all 0.3s ease; /* Add transition */
 }
 
 .course-name {
@@ -80,6 +81,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     line-height: 1.2;
+    transition: all 0.3s ease; /* Add transition */
 }
 
 .nav-menu {
@@ -2038,6 +2040,25 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+}
+.course-link {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: block;
+}
+
+.course-link:hover .course-code {
+    color: #3498db;
+    transform: translateY(-1px);
+}
+
+.course-link:hover .course-name {
+    color: #2c3e50;
+}
+
+.course-link:active {
+    transform: translateY(0);
 }
 
 
