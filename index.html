@@ -8,51 +8,61 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <script>
-    async function loadAnnouncements() {
-        try {
-            const response = await fetch('data/announcements.json');
-            const announcements = await response.json();
-            
-            const container = document.getElementById('announcements-container');
-            const noAnnouncements = document.getElementById('no-announcements');
-            
-            if (announcements.length === 0) {
-                noAnnouncements.style.display = 'block';
-                return;
-            }
-            
-            // Sort by pinned first, then by date (newest first)
-            announcements.sort((a, b) => {
-                if (a.pinned && !b.pinned) return -1;
-                if (!a.pinned && b.pinned) return 1;
-                return new Date(b.date) - new Date(a.date);
-            });
-            
-            container.innerHTML = announcements.map(announcement => `
-                <div class="announcement-card ${announcement.type} ${announcement.pinned ? 'pinned' : ''}">
-                    <div class="announcement-header">
-                        <div class="announcement-date">${formatDate(announcement.date)}</div>
-                        ${announcement.pinned ? '<div class="pin-badge"><i class="fas fa-thumbtack"></i> Pinned</div>' : ''}
-                    </div>
-                    <h4 class="announcement-title">${announcement.title}</h4>
-                    <p class="announcement-content">${announcement.content}</p>
-                </div>
-            `).join('');
-            
-        } catch (error) {
-            console.error('Error loading announcements:', error);
-            document.getElementById('no-announcements').style.display = 'block';
+async function loadAnnouncements() {
+    try {
+        const response = await fetch('data/announcements.json');
+        const announcements = await response.json();
+        
+        const container = document.getElementById('announcements-container');
+        const noAnnouncements = document.getElementById('no-announcements');
+        
+        if (announcements.length === 0) {
+            noAnnouncements.style.display = 'block';
+            return;
         }
+        
+        // Sort by pinned first, then by date (newest first)
+        announcements.sort((a, b) => {
+            if (a.pinned && !b.pinned) return -1;
+            if (!a.pinned && b.pinned) return 1;
+            return new Date(b.date) - new Date(a.date);
+        });
+        
+        container.innerHTML = announcements.map(announcement => `
+            <div class="announcement-card ${announcement.type} ${announcement.pinned ? 'pinned' : ''}">
+                <div class="announcement-header">
+                    <div class="announcement-date">${formatDate(announcement.date)}</div>
+                    ${announcement.pinned ? '<div class="pin-badge"><i class="fas fa-thumbtack"></i> Pinned</div>' : ''}
+                </div>
+                <h4 class="announcement-title">${announcement.title}</h4>
+                <p class="announcement-content">${announcement.content}</p>
+                ${announcement.hasButton ? `
+                    <div class="announcement-button">
+                        <a href="${announcement.buttonLink}" 
+                           class="btn btn-announcement ${announcement.buttonType}" 
+                           target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            ${announcement.buttonText}
+                        </a>
+                    </div>
+                ` : ''}
+            </div>
+        `).join('');
+        
+    } catch (error) {
+        console.error('Error loading announcements:', error);
+        document.getElementById('no-announcements').style.display = 'block';
     }
-    
-    function formatDate(dateString) {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString('en-US', options);
-    }
-    
-    // Load announcements when page loads
-    document.addEventListener('DOMContentLoaded', loadAnnouncements);
-    </script>
+}
+
+function formatDate(dateString) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString('en-US', options);
+}
+
+// Load announcements when page loads
+document.addEventListener('DOMContentLoaded', loadAnnouncements);
+</script>
 
 <body>
     <div class="floating-shapes">
