@@ -9,7 +9,7 @@
       "hasButton": true,
       "buttonText": "Fill the Form",
       "buttonLink": "https://forms.gle/JrPrhZ4JBGPFTpX68",
-      "buttonType": "primary"
+      "buttonType": "secondary"
     },
     {
       "id": 2,
