@@ -1,11 +1,19 @@
 [
     {
       "id": 1,
-      "date": "2025-07-20",
-      "title": "Course Registration Closed",
-      "content": "Registrations for AI60213 are closed now.",
+      "date": "2025-07-29",
+      "title": "Group Fomration Form is live!",
+      "content": "We have circutaed the form to collect the group information, please fill the form. All the instructions are provided in the form itself.",
       "type": "important",
       "pinned": true
+    },
+    {
+      "id": 3,
+      "date": "2025-07-25",
+      "title": "Course Registration Deadline CLosed",
+      "content": "Registration deadline was extended to July 25th due to high demand. Registrations are closed now.",
+      "type": "info",
+      "pinned": false
     },
     {
       "id": 2,
