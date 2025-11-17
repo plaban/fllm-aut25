@@ -1,5 +1,14 @@
-[   {
+[   
+    {
       "id": 1,
+      "date": "2025-11-17",
+      "title": "End Semester Syllabus",
+      "content": "End Semester exam syllabus will cover everything post midterm examination.",
+      "type": "important",
+      "pinned": true
+    },
+    {
+      "id": 2,
       "date": "2025-10-10",
       "title": "Volg and Project Instructions Released",
       "content": "We have uploaded the guidelines for Vlog and Project in their respective page, please download and go through it. For any confusion please do not hesitate to email the TAs.",
@@ -7,15 +16,15 @@
       "pinned": true
     },
     {
-      "id": 2,
+      "id": 3,
       "date": "2025-08-25",
       "title": "Assignment 1 Released",
       "content": "Assignment 1 on 'Deconstructing the Transformer' has been released. Due date: September 6th, 11:59 PM. Check Canvas for submission guidelines.",
       "type": "important",
-      "pinned": true
+      "pinned": false
     },
     {
-      "id": 3,
+      "id": 4,
       "date": "2025-07-29",
       "title": "Group Formation Form is closed!",
       "content": "We have circulated the form to collect the group information, please fill the form. All the instructions are provided in the form itself.",
@@ -27,7 +36,7 @@
       "buttonType": "secondary"
     },
     {
-      "id": 4,
+      "id": 5,
       "date": "2025-07-25",
       "title": "Course Registration Closed",
       "content": "Registration deadline was extended to July 25th due to high demand. Registrations are closed now.",
@@ -35,7 +44,7 @@
       "pinned": false
     },
     {
-      "id": 5,
+      "id": 6,
       "date": "2025-07-20",
       "title": "Webpage Live",
       "content": "Webpage for the course AI60213 is live now.",
